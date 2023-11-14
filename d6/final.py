@@ -6,12 +6,7 @@ import subprocess
 def abrir_programa_recetas():
     try:
         ruta_recetas = Path('Recetas')
-        ruta_completa = Path(Path.home(), ruta_recetas)
         crear_recetario(ruta_recetas)
-        print('\n' + "*" * 30)
-        print('¡Bienvenido a este recetario!')
-        print("*" * 30 + '\n')
-        print(f'La ruta a la carpeta de recetas es: {ruta_completa}')
         mostrar_menu_principal(ruta_recetas)
     # except Exception as e:
     #     print(f'\nSe ha producido una excepción: {e}\n')
@@ -19,6 +14,14 @@ def abrir_programa_recetas():
         print(f'\nDebe ingresar un número de opción válido.\n\n')
     except IndexError as c:
         print(f'\nDebe ingresar un número de opción dentro del rango del menú.\n\n')
+
+
+def saludar(ruta_recetas):
+    print('\n' + "*" * 30)
+    print('¡Bienvenido a este recetario!')
+    print("*" * 30 + '\n')
+    ruta_completa_recetas = Path(os.getcwd(), ruta_recetas)
+    print(f'La ruta a la carpeta de recetas es: {ruta_completa_recetas}')
 
 
 def crear_recetario(ruta_recetas):
@@ -108,6 +111,8 @@ def eliminar_categoria(ruta_recetas, categorias):
 def mostrar_menu_principal(ruta_recetas):
     continuar_programa = True
     while continuar_programa:
+        os.system('clear')
+        saludar(ruta_recetas)
         recetas = [receta.name for receta in ruta_recetas.glob('**/*.txt')]
         categorias = [categoria.name for categoria in ruta_recetas.glob('*/**')]
         total_recetas = len(recetas)
@@ -137,6 +142,7 @@ def mostrar_menu_principal(ruta_recetas):
             case _:
                 continuar_programa = False
                 print("\nPrograma finalizado!\n\n")
+        input('\nPresione la tecla Enter para continuar.')
 
 
 def mostrar_categorias(categorias):
