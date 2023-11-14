@@ -11,15 +11,22 @@ def abrir_programa_recetas():
     # except Exception as e:
     #     print(f'\nSe ha producido una excepción: {e}\n')
     except ValueError as f:
-        print(f'\nDebe ingresar un número de opción válido.\n\n')
+        print(f'\nDebes ingresar un número de opción válido.\n')
+        reiniciar_programa()
     except IndexError as c:
-        print(f'\nDebe ingresar un número de opción dentro del rango del menú.\n\n')
+        print(f'\nDebes ingresar un número de opción dentro del rango del menú.\n')
+        reiniciar_programa()
+
+
+def reiniciar_programa():
+    input('\nPresiona la tecla Enter para comenzar nuevamente.')
+    abrir_programa_recetas()
 
 
 def saludar(ruta_recetas):
-    print('\n' + "*" * 35)
+    print('\n' + "*" * 34)
     print('¡Bienvenido al recetario! 🍇🥦🥩🍰')
-    print("*" * 35 + '\n')
+    print("*" * 34 + '\n')
     ruta_completa_recetas = Path(os.getcwd(), ruta_recetas)
     print(f'La ruta a la carpeta de recetas es: {ruta_completa_recetas}')
     print(f'\nHay en total {len([receta.name for receta in ruta_recetas.glob('**/*.txt')])} recetas.\n')
@@ -67,8 +74,8 @@ def leer_recetas(ruta_recetas, categorias):
 def crear_receta(ruta_recetas, categorias):
     numero_categoria = mostrar_categorias(categorias)
     categoria_seleccionada = categorias[int(numero_categoria) - 1]
-    nombre_nueva_receta = input('Ingrese el nombre de la receta: ')
-    contenido_nueva_receta = input('Ingrese el contenido de la nueva receta: ')
+    nombre_nueva_receta = input('Ingrese el nombre de la receta:\n')
+    contenido_nueva_receta = input('Ingrese el contenido de la nueva receta:\n')
     ruta_nueva_receta = Path(ruta_recetas, categoria_seleccionada, nombre_nueva_receta + '.txt')
     ruta_nueva_receta.write_text(contenido_nueva_receta)
     print(f'\n\nLa nueva receta se ha creado en la ruta "{ruta_nueva_receta}"\n')
@@ -138,8 +145,9 @@ def mostrar_menu_principal(ruta_recetas):
             case '6':
                 eliminar_categoria(ruta_recetas, categorias)
             case _:
-                continuar_programa = False
-                print("\nPrograma finalizado!\n")
+                # continuar_programa = False
+                print("\nPrograma finalizado!\n\n")
+                return
         input('\nPresiona la tecla Enter para continuar.')
 
 
