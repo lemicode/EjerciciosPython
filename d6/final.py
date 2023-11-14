@@ -103,7 +103,7 @@ def eliminar_receta(ruta_recetas, categorias):
 
 def crear_categoria(ruta_recetas):
     nombre_nueva_categoria = input('Ingrese el nombre de la nueva categoría: ')
-    os.mkdir(Path(ruta_recetas, nombre_nueva_categoria))
+    Path.mkdir(Path(ruta_recetas, nombre_nueva_categoria))
     print('\nCategoría creada!\n')
 
 
