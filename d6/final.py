@@ -17,11 +17,12 @@ def abrir_programa_recetas():
 
 
 def saludar(ruta_recetas):
-    print('\n' + "*" * 30)
-    print('¡Bienvenido a este recetario!')
-    print("*" * 30 + '\n')
+    print('\n' + "*" * 35)
+    print('¡Bienvenido al recetario! 🍇🥦🥩🍰')
+    print("*" * 35 + '\n')
     ruta_completa_recetas = Path(os.getcwd(), ruta_recetas)
     print(f'La ruta a la carpeta de recetas es: {ruta_completa_recetas}')
+    print(f'\nHay en total {len([receta.name for receta in ruta_recetas.glob('**/*.txt')])} recetas.\n')
 
 
 def crear_recetario(ruta_recetas):
@@ -112,11 +113,8 @@ def mostrar_menu_principal(ruta_recetas):
     continuar_programa = True
     while continuar_programa:
         os.system('clear')
-        saludar(ruta_recetas)
-        recetas = [receta.name for receta in ruta_recetas.glob('**/*.txt')]
         categorias = [categoria.name for categoria in ruta_recetas.glob('*/**')]
-        total_recetas = len(recetas)
-        print(f'\nHay en total {total_recetas} recetas.\n')
+        saludar(ruta_recetas)
         print('[1] Leer receta')
         print('[2] Crear receta')
         print('[3] Editar receta')
@@ -141,8 +139,8 @@ def mostrar_menu_principal(ruta_recetas):
                 eliminar_categoria(ruta_recetas, categorias)
             case _:
                 continuar_programa = False
-                print("\nPrograma finalizado!\n\n")
-        input('\nPresione la tecla Enter para continuar.')
+                print("\nPrograma finalizado!\n")
+        input('\nPresiona la tecla Enter para continuar.')
 
 
 def mostrar_categorias(categorias):
