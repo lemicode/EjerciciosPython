@@ -1,3 +1,4 @@
+import textwrap
 from random import randint
 from os import system
 
@@ -12,14 +13,14 @@ class Cliente(Persona):
     balance = 0
 
     def __str__(self):
-        return f'''
+        return textwrap.dedent(f'''
             Bienvenido {self.nombre} {self.apellido}!
             
             A continuación se muestran sus datos bancarios:
              
              - Número de cuenta: {self.numero_cuenta}
              - Balance: {self.balance} 
-        '''
+        ''')
 
     def depositar(self):
         monto = int(input('Ingrese el monto que desea depositar: '))
@@ -39,17 +40,21 @@ class Cliente(Persona):
         print(f'\nSu nuevo balance es {self.balance}.')
 
     def seleccionar_operacion(self):
-        print('''
+        print(textwrap.dedent('''
             Operaciones Disponibles:
 
             [1] Depositar
             [2] Retirar
-        ''')
+            [3] Salir
+        '''))
         opcion = input('Ingrese el número de la operación que desea realizar: ')
         if opcion == '1':
             self.depositar()
         elif opcion == '2':
             self.retirar()
+        elif opcion == '3':
+            print('')
+            exit()
         else:
             self.seleccionar_operacion()
 
