@@ -62,7 +62,8 @@ class Cliente(Persona):
 def crear_cliente():
     nombre = input('Ingrese su primer nombre: ')
     apellido = input('Ingrese su primer apellido: ')
-    return nombre, apellido
+    cliente = Cliente(nombre, apellido)
+    return cliente
 
 
 def iniciar_cajero():
@@ -70,8 +71,7 @@ def iniciar_cajero():
     print ('*' * 17)
     print('Cajero Automático')
     print('*' * 17 + '\n\n')
-    nombre, apellido = crear_cliente()
-    cliente = Cliente(nombre, apellido)
+    cliente = crear_cliente()
     salir = False
     while not salir:
         system('clear')
