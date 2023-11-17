@@ -31,3 +31,27 @@ print(next(generador2))
 print(next(generador2))
 print(next(generador2))
 print(next(generador2))
+
+
+def contar_vidas():
+    for mensaje in ["Te quedan 3 vidas", "Te quedan 2 vidas", "Te queda 1 vida", "Game Over"]:
+        yield mensaje
+
+
+perder_vida = contar_vidas()
+print(next(perder_vida))
+print(next(perder_vida))
+print(next(perder_vida))
+print(next(perder_vida))
+
+
+def validar_iteracion():
+    yield 111
+    yield 222
+    yield 333
+
+iteracion = validar_iteracion()
+print(next(iteracion))
+print(next(iteracion))
+print(next(iteracion))
+print(next(iteracion)) # Aquí se genera un error voluntario como parte de la validación
