@@ -35,7 +35,7 @@ def iniciar_programa_turnos():
                     input('\nEse número de Área no existe. Presione Enter para elegir nuevamente.')
                     continue
             turno()
-            input('\nPresione Enter para finalizar.')
+            input('\nPresione Enter para obtener otro turno o finalizar.')
     except:
         iniciar_programa_turnos()
 
