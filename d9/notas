@@ -1,0 +1,15 @@
+Módulo shutil
+Forma de importar: import shutil
+Algunos métodos:
+- shutil.move(archivo.directorio)
+- os.unlink(archivo)
+- os.rmdir(directorio)
+- shutil.rmtree(directorio) # Elimina de forma recursiva
+
+Módulo send2trash
+Debe instalarse: pip install Send2Trash
+Uso: send2trash.send2trash(archivo) # Envía el archivo a la papelera
+
+Módulo os
+- os.walk(directorio) # Recorre de forma recursiva el directorio, devolviendo tuplas de las carpetas,
+                        subcarpetas y archivos a través de un generador.
