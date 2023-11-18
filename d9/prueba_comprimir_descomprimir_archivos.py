@@ -14,9 +14,9 @@ os.unlink('mi_texto_A.txt')
 os.unlink('mi_texto_B.txt')
 
 carpeta_comprimida = zipfile.ZipFile('carpeta_comprimida.zip', 'r')
+# extract() sirve para extrar un solo archivo o miembro el cual debe pasarse como parámetro
 carpeta_comprimida.extractall()
 carpeta_comprimida.close()
-
 
 # Continuando con el uso básico de shutil
 
