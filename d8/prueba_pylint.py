@@ -1,7 +1,7 @@
 """
-MacOS no reconocía el comando pip. Se solucionó así: python3 -m pip install --upgrade pip
-Comando para la instalación de pylint: pip install pylint
-Ejecución de pylint para este caso: pylint prueba_pylint.py -r y
+- MacOS no reconocía el comando pip. Se solucionó así: python3 -m pip install --upgrade pip
+- Comando para la instalación de pylint: pip install pylint
+- Ejecución de pylint para este caso: pylint prueba_pylint.py -r y
 
 
 Código original para analizar:
