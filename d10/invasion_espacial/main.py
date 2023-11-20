@@ -2,7 +2,7 @@ import pygame
 import random
 import math
 from pygame import mixer
-from d10.convertir_fuente import fuente_bytes
+"""from d10.convertir_fuente import fuente_bytes"""
 
 
 # Inicializar Pygame
@@ -49,8 +49,8 @@ img_bala = pygame.image.load('bala.png')
 
 # Puntaje
 puntaje = 0
-# fuente_como_bytes = fuente_bytes('Asteroid 7337.ttf')
-# fuente = pygame.font.Font(fuente_como_bytes, 32)
+"""fuente_como_bytes = fuente_bytes('Asteroid 7337.ttf')
+fuente = pygame.font.Font(fuente_como_bytes, 32)"""
 fuente = pygame.font.Font('Asteroid 7337.ttf', 32)
 texto_x = 10
 texto_y = 10
