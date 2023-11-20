@@ -1,0 +1,3 @@
+([('main',
+   '/Users/marcovanegas/Documents/Python/d10/invasion_espacial/dist/main',
+   'EXECUTABLE')],)

@@ -1,0 +1,15 @@
+Guía rápida para convertir a .exe
+
+1. Convertir los archivos de fuente a objetos Bytes
+2. pip install pyinstaller
+3. pyinstaller --clean --onefile --windowed main.py
+
+    --clean: elimina los archivos temporales creados durante la creación del ejecutable.
+
+    --onefile: crea el ejecutable con todas las dependencias y archivos necesarios.
+
+    --windowed: hace que el ejecutable se visualice en una ventana y no en pantalla completa
+
+    main.py: es el script que se convertirá en ejecutable
+
+4. Se generan dos carpetas, "built" y "dist". En "dist" se deben copiar los assets para que funcione.
