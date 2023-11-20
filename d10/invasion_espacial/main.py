@@ -43,7 +43,7 @@ for e in range(cantidad_enemigos):
     enemigo_x_cambio.append(0.5)  # Tasa de cambio
     enemigo_y_cambio.append(50)  # Tasa de cambio
 
-# Variables del bala
+# Variables -> bala
 balas = []
 img_bala = pygame.image.load('bala.png')
 
