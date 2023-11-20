@@ -80,13 +80,6 @@ def enemigo(x, y, indice):
     pantalla.blit(img_enemigo[indice], (x, y))
 
 
-# Función disparar bala
-def disparar_bala(x, y):
-    global bala_visible
-    bala_visible = True
-    pantalla.blit(img_bala, (x + 16, y + 10))
-
-
 # Función detectar colisión
 def hay_colision(x_1, y_1, x_2, y_2):
     distancia = math.sqrt(math.pow(x_1 - x_2, 2) + math.pow(y_2 - y_1, 2))
