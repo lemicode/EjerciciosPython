@@ -18,7 +18,7 @@ pygame.display.set_icon(icono)
 fondo = pygame.image.load('fondo.jpg')
 
 # Agregar música
-mixer.music.load('MusicaFondo.mp3')
+mixer.music.load('musica_fondo.mp3')
 mixer.music.set_volume(0.3)
 mixer.music.play(-1)
 
@@ -49,14 +49,14 @@ img_bala = pygame.image.load('bala.png')
 
 # Puntaje
 puntaje = 0
-"""fuente_como_bytes = fuente_bytes('Asteroid 7337.ttf')
+"""fuente_como_bytes = fuente_bytes('asteroid.ttf')
 fuente = pygame.font.Font(fuente_como_bytes, 32)"""
-fuente = pygame.font.Font('Asteroid 7337.ttf', 32)
+fuente = pygame.font.Font('asteroid.ttf', 32)
 texto_x = 10
 texto_y = 10
 
 # Texto final del juego
-fuente_final = pygame.font.Font('Asteroid 7337.ttf', 40)
+fuente_final = pygame.font.Font('asteroid.ttf', 40)
 
 
 # Función mostrar mensaje final
@@ -171,7 +171,7 @@ while se_ejecuta:
         for bala in balas:
             colision_bala_enemigo = hay_colision(enemigo_x[e], enemigo_y[e], bala['x'], bala['y'])
             if colision_bala_enemigo:
-                sonido_colision = mixer.Sound('Golpe.mp3')
+                sonido_colision = mixer.Sound('golpe.mp3')
                 sonido_colision.play()
                 balas.remove(bala)
                 puntaje += 1
