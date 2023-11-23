@@ -3,14 +3,17 @@ import requests
 
 # Previamente se instaló lxml: pip install lxml
 
-resultado = requests.get('https://github.com/bamboothink')
+url_base = 'http://books.toscrape.com/'
+
+resultado = requests.get(url_base)
 
 sopa = bs4.BeautifulSoup(resultado.text, 'lxml')
 
-imagenes = sopa.select('img.avatar')[0]['src']
+imagenes = sopa.select('.product_pod img')[0]['src']
 
-imagen_1 = requests.get(imagenes)
+# Como la ruta del elemento es relativa fue necesario añadir la url base
+imagen_1 = requests.get(url_base + imagenes)
 
-archivo = open('avatar.jpg', 'wb')
+archivo = open('imagen.jpg', 'wb')
 archivo.write(imagen_1.content)
 archivo.close()
