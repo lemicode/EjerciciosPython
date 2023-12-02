@@ -15,6 +15,22 @@
 
 > pip install django
 
+# Estructura de directorio inicial sugerido
+
+- web/ (nombre general cualquiera)
+  - src/ (nombre sugerido)
+    - nombre_proyecto/
+      - nombre_app1/
+        - migrations/
+        - templates/
+        - ...
+      - nombre_app2/
+      - ...
+      - nombre_proyecto/ (Lo remite automáticamente el generador de Python al crear el proyecto)
+      - db.sqlite3
+      - manage.py
+  - venv/ (Nombre cualquiera del entorno virtual para el proyecto en particular) 
+
 # Crear proyecto django
 
 > django-admin startproject proyecto
