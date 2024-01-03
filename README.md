@@ -1,6 +1,6 @@
 # Ejercicios - Python 🛸
 
-## Tabla de contenido
+## Tabla de Contenido
 
 - [Directorio 1](d1)
     - [Print](d1/prueba_print.py)
@@ -21,7 +21,7 @@
     - [Sets](d3/prueba_sets.py)
     - [Tuplas](d3/prueba_tuples.py)
     - [Fragmentar](d3/prueba_fragmentar.py)
-    - [Métodos](d3/prueba_metodos.py)
+    - [Algunos Métodos para Cadenas](d3/prueba_metodos.py)
     - [Método Index](d3/prueba_index.py)
     - [Propiedades de Cadenas](d3/prueba_propiedades.py)
     - [Ejercicio Integrador](d3/final.py)
