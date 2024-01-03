@@ -1,4 +1,4 @@
-# Creación de entornos virtuales para Python
+## Creación de entornos virtuales para Python
 
 1. pip install virtualenv
 2. (Opcional) Validar paquetes de Python instaldos --> pip freeze
@@ -11,11 +11,13 @@
 5. Desactivar --> deactivate
 
 
-# Instalar django
+## Instalar django
 
-> pip install django
+´´´python
+    pip install django
+´´´
 
-# Estructura de directorio inicial sugerido
+## Estructura de directorio inicial sugerido
 
 - web/ (nombre general cualquiera)
   - src/ (nombre sugerido)
@@ -31,41 +33,55 @@
       - manage.py
   - venv/ (Nombre cualquiera del entorno virtual para el proyecto en particular) 
 
-# Crear proyecto django
+## Crear proyecto django
 
-> django-admin startproject proyecto
+´´´python
+    django-admin startproject proyecto
+´´´
 
-# Iniciar proyecto
+## Iniciar proyecto
 
-Dentro de la carpeta del proyecto ejecutar --> python3 manage.py runserver
+Dentro de la carpeta del proyecto ejecutar: 
 
-# Correr migraciones
+´´´python
+    python3 manage.py runserver
+´´´
 
-> python3 manage.py migrate
+## Correr migraciones
 
-# Crear súper usuario 
+´´´python
+    python3 manage.py migrate
+´´´
 
-> python3 manage.py createsuperuser
+## Crear súper usuario 
 
-# Crear aplicación
+´´´python
+    python3 manage.py createsuperuser
+´´´
 
-> python3 manage.py startapp nombre_app
+## Crear aplicación
 
-# Crear archivos de migración a partir de los modelos
+´´´python
+    python3 manage.py startapp nombre_app
+´´´
 
-> python3 manage.py makemigrations
+## Crear archivos de migración a partir de los modelos
 
-# Archivo manage.py
+´´´python
+    python3 manage.py makemigrations
+´´´
 
-Es como el CLI de django
+## Archivo manage.py
 
-# Archivo admin.py de la app
+Es como el CLI de Django
 
-En este archivo se registran los modelos para que sean incluidos en el panel del admin
+## Archivo admin.py de la app
 
-# Archivo settings.py del proyecto
+En este archivo se registran los modelos para que sean incluidos en el panel del admin.
 
-Uso:
+## Archivo settings.py del proyecto
+
+#### Uso:
 
 - Registro de las nuevas apps
 - Registro de la carpeta templates
