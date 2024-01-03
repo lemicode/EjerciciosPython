@@ -13,9 +13,9 @@
 
 ## Instalar django
 
-´´´python
+```python
     pip install django
-´´´
+```
 
 ## Estructura de directorio inicial sugerido
 
@@ -35,41 +35,41 @@
 
 ## Crear proyecto django
 
-´´´python
+```python
     django-admin startproject proyecto
-´´´
+```
 
 ## Iniciar proyecto
 
 Dentro de la carpeta del proyecto ejecutar: 
 
-´´´python
+```python
     python3 manage.py runserver
-´´´
+```
 
 ## Correr migraciones
 
-´´´python
+```python
     python3 manage.py migrate
-´´´
+```
 
 ## Crear súper usuario 
 
-´´´python
+```python
     python3 manage.py createsuperuser
-´´´
+```
 
 ## Crear aplicación
 
-´´´python
+```python
     python3 manage.py startapp nombre_app
-´´´
+```
 
 ## Crear archivos de migración a partir de los modelos
 
-´´´python
+```python
     python3 manage.py makemigrations
-´´´
+```
 
 ## Archivo manage.py
 
