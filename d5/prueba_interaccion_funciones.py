@@ -4,7 +4,9 @@ def lanzar_dados():
     dado1 = randint(1, 6)
     dado2 = randint(1, 6)
     return (dado1, dado2)
+
 dado1, dado2 = lanzar_dados()
+
 def evaluar_jugada(dado1, dado2):
     suma_dados = dado1 + dado2
     mensaje = ""
@@ -21,8 +23,10 @@ def reducir_lista(lista):
     numero_maximo = max(lista)
     lista_nueva.remove(numero_maximo)
     return list(lista_nueva)
+
 lista_numeros = [1, 2, 3, 4, 4, 5]
 lista_final = reducir_lista(lista_numeros)
+
 def promedio(lista):
     suma = sum(lista)
     conteo = len(lista)
@@ -31,8 +35,10 @@ def promedio(lista):
 def lanzar_moneda():
     moneda = ['Cara', 'Cruz']
     return choice(moneda)
+
 lista_numeros = [1, 2, 3, 4]
 moneda = lanzar_moneda()
+
 def probar_suerte(moneda, lista):
     if moneda == 'Cara':
         print("La lista se autodestruirá")
