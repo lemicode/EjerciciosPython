@@ -82,7 +82,7 @@
     - [Módulo re](d9/prueba_modulo_re.py)
     - [Notas](d9/notas)
     - [Ejercicio Integrador](d9/final/)
-- [Directorio 10][d10]    
+- [Directorio 10](d10)   
     - [Notas](d10/notas)
     - [Juego con pygame](d10/invasion_espacial/)
 - [Directorio 11](d11)
