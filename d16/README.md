@@ -1,3 +1,8 @@
+## Credenciales por defecto
+
+User: admin
+Password: admin
+
 ## Creación de entornos virtuales para Python
 
 1. ```pip install virtualenv```
@@ -44,7 +49,7 @@
 Dentro de la carpeta del proyecto ejecutar: 
 
 ```python
-    python3 manage.py runserver
+    python3 manage.py runserver 8080
 ```
 
 ## Correr migraciones
