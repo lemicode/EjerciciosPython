@@ -1,7 +1,7 @@
 ## Credenciales por defecto
 
-* User: admin
-* Password: admin
+* User: ```admin```
+* Password: ```admin```
 
 ## Creación de entornos virtuales para Python
 
